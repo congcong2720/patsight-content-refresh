@@ -207,6 +207,7 @@ const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(
 const patsightDash = path.resolve(import.meta.dirname, "../patsight-app-v2/src/assets/images/dashboard");
 
 export default defineConfig({
+  base: "./",
   plugins,
   resolve: {
     alias: {
