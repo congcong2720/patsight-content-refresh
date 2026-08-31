@@ -8,7 +8,10 @@ import Home from "./pages/Home";
 
 
 function Router() {
-  if (window.location.protocol === "file:") {
+  const pathname = window.location.pathname.replace(/\/+$/, "") || "/";
+  const isPublishedHome = pathname === "/patsight-content-refresh";
+
+  if (window.location.protocol === "file:" || pathname === "/" || isPublishedHome) {
     return <Home />;
   }
 
