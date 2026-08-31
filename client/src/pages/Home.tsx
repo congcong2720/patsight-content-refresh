@@ -2,17 +2,18 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 import { ArrowUpRight, ChevronLeft, ChevronRight, Database, Languages, Route, Sparkles, Terminal, Zap } from "lucide-react";
 
-import dashTopCn from "@patsight-dash/dash-top-cn.png";
-import dashTopEn from "@patsight-dash/dash-top-en.png";
-import reportCn from "@patsight-dash/dash-top-report-cn.png";
-import reportEn from "@patsight-dash/dash-top-report-en.png";
-import molHeroCn from "@patsight-dash/dash-top-mol-cn.png";
-import molHeroEn from "@patsight-dash/dash-top-mol-en.png";
-import introItem1Cn from "@patsight-dash/intro-item-1-cn.png";
-import introItem1En from "@patsight-dash/intro-item-1-en.png";
-import introItem3Cn from "@patsight-dash/intro-item-3-cn.png";
-import introItem3En from "@patsight-dash/intro-item-3-en.png";
-import routeShot from "@patsight-dash/syn-route.png";
+const ASSET_ROOT = "https://patent.xinsight-ai.com/assets";
+const dashTopCn = `${ASSET_ROOT}/dash-top-cn-Bty1AbUE.png`;
+const dashTopEn = `${ASSET_ROOT}/dash-top-en-DvKNkQpx.png`;
+const reportCn = `${ASSET_ROOT}/dash-top-report-cn-4w7CZUxA.png`;
+const reportEn = `${ASSET_ROOT}/dash-top-report-en-DqXdwkWW.png`;
+const molHeroCn = `${ASSET_ROOT}/dash-top-mol-cn-QIxV8tBK.png`;
+const molHeroEn = `${ASSET_ROOT}/dash-top-mol-en-BT78sgGG.png`;
+const introItem1Cn = `${ASSET_ROOT}/intro-item-1-cn-CdxRZRoI.png`;
+const introItem1En = `${ASSET_ROOT}/intro-item-1-en-CXntUk85.png`;
+const introItem3Cn = `${ASSET_ROOT}/intro-item-3-cn-BPtfj_cd.png`;
+const introItem3En = `${ASSET_ROOT}/intro-item-3-en-CZJUDWqo.png`;
+const routeShot = `${ASSET_ROOT}/syn-route-DwzQI86u.png`;
 
 type Lang = "zh" | "en";
 const LOCALE_KEY = "patsight-landing-locale-en-default";
