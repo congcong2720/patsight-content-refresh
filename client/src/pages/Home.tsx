@@ -18,6 +18,7 @@ const routeShot = `${ASSET_ROOT}/syn-route-DwzQI86u.png`;
 type Lang = "zh" | "en";
 const LOCALE_KEY = "patsight-landing-locale-en-default";
 const PRODUCT_URL = "https://patent.xinsight-ai.com/home";
+const CASE_STUDIES_URL = "https://patent.xinsight-ai.com/case/27";
 
 const shots = {
   zh: {
@@ -104,10 +105,12 @@ const copy = {
       { name: "MolVision OCSR", desc: "从图片识别分子结构" },
       { name: "IUPACExtract", desc: "提取名称与结构" },
     ],
-    casesKicker: "案例分析",
-    caseMeta: "PatSight, 案例研究, 软件平台",
-    caseTitle: "一小时提取 1,500 个分子结构和活性数据",
-    caseAria: "查看 PatSight 一小时提取 1,500 个分子结构和活性数据案例",
+    casesKicker: "案例研究",
+    caseMeta: "PatSight · Case Studies",
+    caseTitle: "探索 PatSight 案例研究",
+    caseDesc: "了解 PatSight 如何从药物专利中快速提取结构与活性数据，并加速构效关系分析。",
+    caseCta: "查看案例",
+    caseAria: "前往 PatSight 案例研究页面",
     voicesKicker: "来自用户的声音",
     voicesPrev: "上一条评价",
     voicesNext: "下一条评价",
@@ -187,9 +190,11 @@ const copy = {
       { name: "IUPACExtract", desc: "Extract names and structures" },
     ],
     casesKicker: "Case Studies",
-    caseMeta: "PatSight, Case Study, Software Platform",
-    caseTitle: "Extract 1,500 molecular structures and activity data in one hour",
-    caseAria: "View the PatSight case: extract 1,500 molecular structures and activity data in one hour",
+    caseMeta: "PatSight · Case Studies",
+    caseTitle: "Explore PatSight Case Studies",
+    caseDesc: "See how PatSight rapidly extracts structures and activity data from drug patents to accelerate SAR analysis.",
+    caseCta: "View case studies",
+    caseAria: "Visit the PatSight case studies page",
     voicesKicker: "Voices from users",
     voicesPrev: "Previous testimonial",
     voicesNext: "Next testimonial",
@@ -369,7 +374,7 @@ export default function Home() {
 
         <section className="ecosystem-section"><div className="content-grid"><div className="section-label">04<br /><span>{t.ecoKicker}</span></div><div className="ecosystem-copy"><div className="overline">{t.ecoOverline}</div><h2 dangerouslySetInnerHTML={{ __html: t.ecoTitle }} /><p>{t.ecoDesc}</p><div className="tool-line">{t.tools.map((tool) => <div key={tool.name}><strong>{tool.name}</strong><span>{tool.desc}</span></div>)}</div></div></div></section>
 
-        <section className="case-section" id="cases"><div className="content-grid"><div className="section-label">05<br /><span>{t.casesKicker}</span></div><div className="case-stage"><a className="case-card" href="#contact" aria-label={t.caseAria}><span className="case-meta">{t.caseMeta}</span><h3>{t.caseTitle}</h3><span className="case-arrow"><ChevronRight size={17} strokeWidth={1.2} /></span></a></div></div></section>
+        <section className="case-section" id="cases"><div className="content-grid"><div className="section-label">05<br /><span>{t.casesKicker}</span></div><div className="case-stage"><a className="case-card" href={CASE_STUDIES_URL} target="_blank" rel="noreferrer" aria-label={t.caseAria}><span className="case-meta">{t.caseMeta}</span><h3>{t.caseTitle}</h3><p>{t.caseDesc}</p><span className="case-link">{t.caseCta}</span><span className="case-arrow"><ChevronRight size={17} strokeWidth={1.2} /></span></a></div></div></section>
 
         <VoicesCarousel />
 

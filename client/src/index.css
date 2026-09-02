@@ -102,3 +102,34 @@
   }
   .xtal-page[lang="zh-CN"] .inline-stats span{white-space:nowrap}
 }
+
+/* Case Studies gateway */
+.case-stage{min-height:480px;padding:118px 8vw 100px 5vw}
+.case-card{
+  width:min(100%,640px);
+  min-height:230px;
+  padding:30px 88px 32px 32px;
+  border:1px solid rgba(194,202,233,.22);
+  border-top-color:rgba(99,241,161,.7);
+  background:linear-gradient(112deg,rgba(24,29,78,.9),rgba(10,13,48,.76));
+  box-shadow:0 24px 60px rgba(0,0,0,.18);
+  transition:transform .2s ease,border-color .2s ease,background .2s ease;
+}
+.case-card:hover{
+  transform:translateY(-3px);
+  border-color:rgba(99,241,161,.55);
+  background:linear-gradient(112deg,rgba(30,38,100,.94),rgba(12,16,58,.82));
+}
+.case-meta{color:#aeb5ce;font-size:12px;letter-spacing:.04em}
+.case-card h3{max-width:480px;margin:18px 0 12px;font-size:28px;line-height:1.35;font-weight:500}
+.case-card p{max-width:500px;margin:0;color:#aeb4c8;font-size:14px;line-height:1.8}
+.case-link{display:inline-block;margin-top:26px;color:var(--green);font-size:13px;font-weight:500}
+.case-arrow{right:28px;bottom:28px;width:42px;height:42px;border-color:rgba(99,241,161,.45);color:var(--green)}
+
+@media(max-width:760px){
+  .case-stage{min-height:0;padding:64px 24px 72px}
+  .case-card{min-height:240px;padding:26px 64px 28px 24px}
+  .case-card h3{font-size:23px}
+  .case-card p{font-size:13px}
+  .case-arrow{right:20px;bottom:24px;width:38px;height:38px}
+}
